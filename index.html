@@ -4,12 +4,28 @@
     <title>My Portfolio</title>
 	<style>
 		body{
-			background-color: #EDBEB5;
+			background-color: #e6ccc7;
 			font-family: Georgia, sans-serif;
 		}
 		h1{
 			color: #1e2d3d;
 			font-size: 48px;
+			overflow: hidden;
+			white-space: nowrap;
+			display: inline-block;
+			width: max-content;
+			max-width: 0;
+			animation: typing 3s steps(22) forwards, blink 0.7s step-end infinite;
+			border-right: 3px solid #1e2d3d;
+		}
+		@keyframes blink{
+			from {border-color:  #1e2d3d;}
+			to {border-color: transparent;}
+		}
+
+		@keyframes typing{
+			from {max-width: 0;}
+			to {max-width: 100%;}
 		}
 		p{
 			color:#3a4f63;
@@ -34,9 +50,13 @@
 			padding: 0 40px;
 
 		}
-		#hero img{
+		
+		#hero p{
+				font-size: 19px;
+			}
+			#hero img{
 			width: 200px;
-			height: 200px;
+			height: 250px;
 			border-radius: 50%;
 			object-fit: cover;
 		}
@@ -48,19 +68,19 @@
 		#social a {
 			text-decoration: none;
 			color:#3a4f63;
-			font-size: 14px;
+			font-size: 16px;
 			font-weight: 500; 
 		}
 		#social a:hover{
 			text-decoration: underline;
 		}
 		#about {
-			background-color: #e6e1d7;
-			padding: 60px 40px;
+			background-color: rgb(230 225 215 / 70%);
+			padding: 50px 40px;
   			text-align: center;
 			border-radius: 16px;
-			max-width: 820px;
-			margin: 0 auto 60px;
+			max-width: 1400px;
+			margin: 0 auto 40px;
 		}
 		#about h2{
 			font-size: 32px;
@@ -68,10 +88,30 @@
 			margin-bottom: 20px;
 		}
 		#about p {
-			max-width: 820px;
+			max-width: 1400px;
 			margin: 0 auto;
 			line-height: 1.8;
 			color: #3a4f63;
+			text-align: left;
+		}
+		#UnitedNations{
+			background-color: rgb(255 255 255 / 20%);
+			padding: 40px 40px;
+			text-align: center;
+			border-radius: 10px;
+			max-width: 1000px;
+			margin: 0 auto 60px;
+		}
+		#UnitedNations h2{
+			font-size: 25px;
+			color: #1e2d3d;
+			margin-bottom: 20px;
+			text-align: left;
+		}
+		#UnitedNations h3{
+			text-align: left;
+		}
+		#UnitedNations p{
 			text-align: left;
 		}
 	</style>
@@ -87,26 +127,59 @@
 		
 	 </nav>
 	 <section id="hero">
-		<img src="" alt="My photo"/>
+		<img src="assets/images/My Photo.jpg" alt="my photo"/>
 		<div>
 			<p> New York, Boston</p>
 			<h1> Hello, I'm Minju Sung</h1>
-			<p>I'm a student at Northeastern University, nice to meet you!</p>
+			<p>I'm a Computer Science student at Northeastern University, nice to meet you!</p>
 		<div id="social">
 			<a href="http://github.com/minjusun">Github</a>
 			<a href="http://linkedin.com/in/minjuSung">LinkedIn</a>
-			<a href="#">Resume</a>
-			<a href="#">sung.minj@northeastern.edu</a>
+			<a href="assets/files/MinjuSung-Co-op Resume v5.pdf">Resume</a>
+			<a href="mailto:sung.minj@northeastern.edu">sung.minj@northeastern.edu</a>
 		</div>
 		</div>
 	 </section>
 	 <section id="about">
 	 	<h2>About Me</h2>
-		<p> I am a Computer Science student with a concentration in Artificial Intelligence. This summer, I had to opportunity to 
-			contribute to a team project during a Software in International Government and Politics Dialogue, where we created an application 
-			for Farmers, Policy Makers, and Researchers to make informed agricultural decisions by providing predicted crop + price recommendations based on 
-			available resources in the EU.</p>
+		<p> I am a Computer Science student with a minor in Mathematics at Northeastern University. I am interested in machine learning 
+			algorithms and using technology to solve real-world problems, with experience ranging from technical team projects to human-centered nonprofit work.<br>
+			This summer, I participated in Northeastern's <i>Software in International Government and Politics </i> Program, where my team developed an application to support agricultural decision-making with ml models.
+			Beyond academics, I enjoy hiking, reading, ballet, and competing as a member of Northeastern's Debate Society.
+		</p>
 	 </section>
+	 <section id="UnitedNations">
+		<h2>United Nations Fellowship</h2>
+		<h3>
+			Contract Management Application and Automation
+		</h3>
+		<p>
+			During my fellowship at the United Nations, I collaborated with an incredible team of developers and strategists to build an application that optimizes the donor contract management 
+			for the Mine Action Service within the Department of Peace Operations. My contributions included developing an AI-powered contract parser, designing systems for managing contract data, 
+			and supporting preparations for deployment across the organization. This experience strengthened both my technical skills and my ability to work on large scale, mission driven projects.
+		</p>
+	 </section>
+	 <section id="projects">
+		<h2>Projects</h2>
+
+	 </section>
+	 <img src="" alt=""/> 
+	 <div>
+		<h3> 
+			Farmer's Market
+		</h3>
+		<p>
+			A platform for farmers, policymakers, and researchers to make informed agricultural decisions through crop price forecasting, crop recommendations, trend analysis, and community driven discussions.
+		</p>
+	 </div>
+	 <div>
+		<h3>
+			Cetacean Identification and Mapping
+		</h3>
+		<p>
+			Detect humback whales from satellite imagery and estimate whale sighting locations based on environmental factors.
+		</p>
+	 </div>
 	 
   </body>
 </html>
